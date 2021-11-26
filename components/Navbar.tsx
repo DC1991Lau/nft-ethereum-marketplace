@@ -6,12 +6,14 @@ import { MoonIcon, SearchIcon } from "@heroicons/react/outline";
 const Navbar: React.FC = () => {
   return (
     <div className="h-20 flex items-center w-full justify-between px-8">
-      <div className="flex items-center">
-        <Link href="/">
+      <Link href="/">
+        <div className="flex items-center cursor-pointer">
           <a className="bg-yellow-400 p-2 rounded-lg flex-shrink-0">NFT</a>
-        </Link>
-        <span className="ml-2 text-xl">NFT Market</span>
-      </div>
+          <span className="sm:hidden lg:inline-flex ml-2 text-xl font-bold">
+            Project X - NFT
+          </span>
+        </div>
+      </Link>
 
       <div className="flex bg-gray-200 rounded-2xl h-10 items-center px-4">
         <SearchIcon className="h-6 text-gray-400" />
@@ -26,39 +28,41 @@ const Navbar: React.FC = () => {
         <Link href="/">
           <a
             href=""
-            className="text-base text-gray-900 hover:text-gray-900 transition-colors"
+            className="text-base text-gray-900 hover:text-gray-900 transition-colors flex-shrink-0"
           >
             Explore NFTs
           </a>
         </Link>
 
-        <Link href="/">
+        <Link href="/creatordashboard">
           <a
             href=""
-            className="text-base text-gray-400 hover:text-gray-900 transition-colors"
+            className="text-base text-gray-400 hover:text-gray-900 transition-colors flex-shrink-0"
           >
-            Sell NFTs
+            NFT Creator Dashboard
           </a>
         </Link>
 
-        <Link href="/">
+        <Link href="/myassets">
           <a
             href=""
-            className="text-base text-gray-400 hover:text-gray-900 transition-colors"
+            className="text-base text-gray-400 hover:text-gray-900 transition-colors flex-shrink-0"
           >
-            Buy NFTs
+            My NFTs
           </a>
         </Link>
       </div>
 
       <div className="flex items-center space-x-3 ">
-        <button className="flex h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
-          Create NFT
-        </button>
-        <button className="flex h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
+        <Link href="/createitem">
+          <button className="flex flex-shrink-0 h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
+            Create NFT
+          </button>
+        </Link>
+        {/* <button className="flex flex-shrink-0 h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
           Login
-        </button>
-        <button className="flex h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
+        </button> */}
+        <button className="flex flex-shrink-0 h-10 px-5 justify-center text-sm rounded-full items-center font-semibold border border-solid border-gray-200 hover:border-gray-400 transition-colors">
           <MoonIcon className="h-6" />
         </button>
       </div>

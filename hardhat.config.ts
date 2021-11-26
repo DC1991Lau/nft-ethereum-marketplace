@@ -4,12 +4,13 @@ const privateKey = fs.readFileSync(".secret").toString();
 const projectId = "482b237020ad42e89e60f763c975c864";
 
 module.exports = {
+  defaultNetwork: "localhost",
   networks: {
-    hardhat: {
-      chainId: 1337,
+    localhost: {
+      chainId: 31337,
     },
     mumbai: {
-      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
+      url: `https://matic-mumbai.chainstacklabs.com`,
       accounts: [privateKey],
     },
     mainnet: {

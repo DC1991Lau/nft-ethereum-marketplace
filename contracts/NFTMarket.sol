@@ -126,7 +126,7 @@ contract NFTMarket is ReentrancyGuard {
 		return items;
 	}
 
-	/* Returns only items that a user has purchased */
+	/* Returns onlyl items that a user has purchased */
 	function fetchMyNFTs() public view returns (MarketItem[] memory) {
 		uint256 totalItemCount = _itemIds.current();
 		uint256 itemCount = 0;
